@@ -1,2 +1,106 @@
-<h1>Hello World!!</h1>
-<h2>my name is sid</h2>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body>
+        <div class="header">
+
+
+        </div>
+        
+        <div class="main">
+           
+            <div class="logo">
+                <h1>Tag Machine</h1>
+                <h4>~you can't know all the tags</h4>
+                <input id="myinput" class="search" type="text" placeholder="Enter attribute..." onkeyup="tags()" onclick="document.getElementById('myinput').value.toUpperCase();">
+                
+
+                <ul id="myUL">
+                <li><a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">a</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">form</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">p</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_title.asp" target="_blank">title</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_body.asp" target="_blank">body</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_hr.asp" target="_blank">hr</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_br.asp" target="_blank">br</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_q.asp" target="_blank">q</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_doctype.asp" target="_blank">!DOCTYPE </a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_link.asp" target="_blank">link</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_nav.asp" target="_blank">nav</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">ul</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_ol.asp" target="_blank">ol</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_dir.asp" target="_blank">dir</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_dl.asp" target="_blank">dl</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_dt.asp" target="_blank">dt</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_table.asp" target="_blank">table</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_caption.asp" target="_blank">caption</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_thead.asp" target="_blank">thead</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_col.asp" target="_blank">col</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_colgroup.asp" target="_blank">colgroup</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_style.asp" target="_blank">style</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_span.asp" target="_blank">span</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_div.asp" target="_blank">div</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_header.asp" target="_blank">header</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_footer.asp" target="_blank">footer</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_main.asp" target="_blank">main</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_section.asp" target="_blank">section</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_meta.asp" target="_blank">meta</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_script.asp" target="_blank">script</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">input</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">img</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">button</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_time.asp" target="_blank">time</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_dialog.asp" target="_blank">dialog</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_aside.asp" target="_blank">aside</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_summary.asp" target="_blank">summary</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_applet.asp" target="_blank">applet</a></li>
+                <li><a href="https://www.w3schools.com/tags/tag_source.asp" target="_blank">source</a></li>
+                </ul>
+                <div class="popup" onclick="myFunction()">!! NOTE !!
+                    <span class="popuptext" id="myPopup">I have used refference website "W3schools" to give info about tags</span>
+                  </div>
+
+                  <div class="popup1" onclick="myFunction1()">MY MESSAGE
+                    <span class="popuptext1" id="myPopup1">I have tried to make a simple search bar web-template, numerous things are need to be added and can be after both time and expierence. This is my first web-dev task and I have given my fullest.</span>
+                  </div>
+                <script>
+                    function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+function myFunction1() {
+  var popup = document.getElementById("myPopup1");
+  popup.classList.toggle("show");
+}
+                    const tags =() => {
+    let filter=document.getElementById('myinput').value.toUpperCase();
+    let ul= document.getElementById('myUL');
+    let li= ul.getElementsByTagName('li');
+    for(var i=0;i<li.length;i++){
+        let a=li[i].getElementsByTagName('a')[0];
+        let textvalue=a.textContent || a.innerHTML;
+        if(textvalue.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display='';
+        }
+        else{
+            li[i].style.display= "none";
+        }
+    }
+}
+                </script>
+
+                
+            </div>
+
+            <div class="footer">
+
+
+    </div>
+  
+</body>
+
+</html>
