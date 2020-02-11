@@ -1,6 +1,6 @@
 .search{
     width:500px;
-    opacity: 50%;
+    
     background-color: #ffffff; 
     border-width: 0.5px;
     border-color: tomato;
@@ -18,7 +18,7 @@
 }
 .logo{
     color: aliceblue snow ;
-    opacity: 20%;
+    
     
 }
 body{
